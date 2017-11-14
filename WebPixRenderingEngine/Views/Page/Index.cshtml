@@ -1,0 +1,22 @@
+﻿@model WebPixCoreUI.Models.PageViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @{
+        if (Model == null)
+        {
+            <center>
+                <h3>Olá a pagina que você esta tentando acessar esta fora do AR </h3><br />
+                <p> Mas tenha a calma logo logo nos voltamos :D</p>
+            </center>
+        }
+        else
+        {
+            @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.Conteudo))
+        }
+    }
+</div>
+
+
